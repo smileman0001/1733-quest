@@ -15,18 +15,28 @@ article/*,aside,nav*/,section{
   border:2px solid #9779ec;
 }
 article::before,aside::before,nav::before,section::before{color:#9779ec}
-p{background-color:#f3faff}
+p{
+  margin: 40px;
+  background-color:#f3faff;
+  border:2px solid #f36dff;
+  size: 100px 100px;
+}
 header{
   background-color: #606060;
   color: white;
+  height: 100px;
+  padding-top: 50px;
+  padding-left: 15px;
 }
 /* h1{font-size:18px;border:2px solid #ff994f} */
 /* h1::before{content:"h1";color:#ff994f} */
-p{
-  border:2px solid #f36dff;
-  size: 150px 150px;
-}
-*{position:relative;padding:16px 15px 10px;border-radius:4px}:not(:last-child){margin-bottom:10px}::before{position:absolute;top:3px;left:5px;font-weight:700;font-size:11px;line-height:10px;letter-spacing:.04em}
+
+main{
+  margin: 20px;
+  position:relative;
+  padding:16px 15px 10px;
+  border-radius:4px
+  }:not(:last-child){margin-bottom:10px}::before{position:absolute;top:3px;left:5px;font-weight:700;font-size:11px;line-height:10px;letter-spacing:.04em}
 /* main::before{content:"main"} */
 /* header::before{content:"header"} */
 /* footer::before{content:"footer"} */
@@ -56,5 +66,8 @@ main>nav+section:last-of-type{
 }
 main>nav+section>p:not(:only-child){margin-bottom:10px}
 main>nav+section>p:not(:last-child){margin-right:10px}
-main>aside{grid-area:sidebar}
+main>aside{
+  grid-area:sidebar;
+  width: 0px;
+}
 nav {background-color:white ; border:2px solid #9779ec}
