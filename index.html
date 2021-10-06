@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8">
     <!--<title>Первое испытание</title>-->
-    <link rel="stylesheet" href="outlines-challenge.css">
     <link rel="stylesheet" href="style.css">
     <title>Quest!</title>
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <script type="text/javascript">
+      function toggleText(btn) {
+        let arr = new Map();
+        arr.set(" Ответ 1 ", "Вариант 1").set(" Ответ 2 ", "Вариант 2");
+        let str = btn.innerHTML;
+        document.getElementById('history').textContent = arr.get(str);
+      }
+      //document.getElementById('button1').addEventListener('click', toggleText);
+    </script>
   </head>
 
   <body>
@@ -15,20 +24,17 @@
       </h1>
     </header>
     <main>
-      <nav>
+      <div class="history" id = "history">
         Текст истории
-      </nav>
-      <section>
-        <p>
-          Ответ 1
-        </p>
-        <p>
-          Ответ 2
-        </p>
+      </div>
+      <section class="answers">
+        <div class = "button1">
+          <button id = "button1"  class="button" onclick="toggleText(this)"> Ответ 1 </button>
+        </div>
+        <div class = "button2">
+          <button id = "button2"  class="button" onclick="toggleText(this)"> Ответ 2 </button>
+        </div>
       </section>
-        <aside>
-          <img src="img/mm.png" alt="">
-        </aside>
     </main>
     <footer>
       Подвал сайта
