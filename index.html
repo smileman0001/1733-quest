@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <!--<title>Первое испытание</title>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Quest!</title>
     <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
@@ -18,11 +21,23 @@
   </head>
 
   <body>
-    <header>
-      <h1>
-        1733 квест
-      </h1>
-    </header>
+    <div class="wrapper">
+    <header class = "header">
+        <div class="header__conteiner _container">
+          <a href="" class="header__logo">
+            <img class = "_logo" src="img/logo1.png">
+            <h1 class="logo_1733 _logo">
+              1733
+            </h1>
+          </a>
+          <div class="header__doplogo">
+            <img id="pipka" class = "_logo" src="img/pipka.png">
+            <h1 class="logo_map _logo">
+              квест
+            </h1>
+          </div>
+        </div>
+      </header>
     <main>
 <<<<<<< Updated upstream
       <div class="history" id = "history">
@@ -65,5 +80,6 @@
     <footer>
       Подвал сайта
     </footer>
+  </div>
   </body>
 </html>
