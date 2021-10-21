@@ -48,11 +48,11 @@ text {
   min-height: 100%;
   overflow: hidden;   /*убирает горизонтальный дефолтный скрол на сайте */
 }
-body {
+/*body {
   width: 100%;
-  /*min-height: 100vh;*/
+  min-height: 100vh;
   height: 100%;
-}
+}*/
 [class^="button-"] {
   background-color: skyblue;
   /* Размещаем контейнеры по центру */
