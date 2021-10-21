@@ -53,19 +53,16 @@ body {
   /*min-height: 100vh;*/
   height: 100%;
 }
-
 [class^="button-"] {
   background-color: skyblue;
   /* Размещаем контейнеры по центру */
   /*display: grid;*/
   place-items: center;
 }
-
 main {
   display: grid;
   gap: 20px;
   /*height: 100vh;*/
-
   /* ! */
   grid-template-areas:
     "A A A A A A"
@@ -73,6 +70,13 @@ main {
     "B B B B B B";
 }
 
+/*header {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}*/
 header {
   background-color: #2D2E2C;
   height: 90px;
@@ -135,65 +139,54 @@ img {
 }
 
 footer {
-	position: absolute;
+  position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 50px;
 }
-
 .history {
-	grid-area: A;
-	justify-self : center;
-	align-self : center;
-
-	font-family:"Roboto",bold;
-	font-size:30px;
-
-	border-radius: 4px;
-	border:2px solid #606060;
-	padding:30px 75px 30px;
-
-	width: 630px;
+  grid-area: A;
+  justify-self : center;
+  align-self : center;
+  font-family:"Roboto",bold;
+  font-size:30px;
+  border-radius: 4px;
+  border:2px solid #606060;
+  padding:30px 75px 30px;
+  width: 630px;
     height: 300px;
     background-color: white;
 }
-
 .answers {
-	grid-area: B;
-	justify-self : center;
-	align-self : center;
-
-	display: grid;
-	  gap: 0px 80px;
-
-	  grid-template-areas:
-	    "O O O O O O    C C C C C C"
-	    "O O O O O O    C C C C C C";
+  grid-area: B;
+  justify-self : center;
+  align-self : center;
+  display: grid;
+    gap: 0px 80px;
+    grid-template-areas:
+      "O O O O O O    C C C C C C"
+      "O O O O O O    C C C C C C";
 }
-
-
 .button1 {
-	grid-area: O; 
-	justify-self : center;
-	align-self : center;
+  grid-area: O; 
+  justify-self : center;
+  align-self : center;
 }
-
 .button2 {
-	grid-area: C;
-	justify-self : center;
-	align-self : center;
+  grid-area: C;
+  justify-self : center;
+  align-self : center;
 }
-
 .button {
-	font-family:"Roboto",bold;
-	font-size:30px;
-	margin-top: 40px;
-	border-radius: 4px;
-	border:2px solid #606060;
-	padding:16px 15px 10px;
-	width: 300px;
+  font-family:"Roboto",bold;
+  font-size:30px;
+  margin-top: 40px;
+  border-radius: 4px;
+  border:2px solid #606060;
+  padding:16px 15px 10px;
+  width: 300px;
     height: 150px;
     background-color: white;
-	text-align: center;
+  text-align: center;
 }
