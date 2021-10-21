@@ -8,24 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Quest!</title>
-    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-    <script type="text/javascript">
-      function toggleText(btn) {
-        let arr = new Map();
-        arr.set(" Ответ 1 ", "Вариант 1").set(" Ответ 2 ", "Вариант 2");
-        let str = btn.innerHTML;
-        document.getElementById('history').textContent = arr.get(str);
-      }
-      //document.getElementById('button1').addEventListener('click', toggleText);
-    </script>
   </head>
 
   <body>
-    <header>
-      <h1>
-        1733 квест
-      </h1>
-    </header>
     <div class="wrapper">
     <header class = "header">
         <div class="header__conteiner _container">
@@ -37,13 +22,23 @@
           </a>
           <div class="header__doplogo">
             <img id="pipka" class = "_logo" src="img/pipka.png">
-            <h1 class="logo_map _logo">
+            <h1 class="logo_quest _logo">
               квест
             </h1>
           </div>
         </div>
       </header>
     <main>
+      <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+      <script type="text/javascript">
+        function toggleText(btn) {
+          let arr = new Map();
+          arr.set(" Ответ 1 ", "Вариант 1").set(" Ответ 2 ", "Вариант 2");
+          let str = btn.innerHTML;
+          document.getElementById('history').textContent = arr.get(str);
+        }
+        //document.getElementById('button1').addEventListener('click', toggleText);
+      </script>
       <div class="history" id = "history">
         Текст истории
       </div>
@@ -56,9 +51,9 @@
         </div>
       </section>
     </main>
-    <footer>
+    <!-- <footer>
       Подвал сайта
-    </footer>
+    </footer> -->
   </div>
   </body>
 </html>
