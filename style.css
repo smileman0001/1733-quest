@@ -1,5 +1,53 @@
-body,html{font-family:"Roboto",bold;font-size:30px;line-height:40px}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  font-family: Roboto;
+}
+*,
+*::before
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+   /* Путь к фоновому изображению */
+   background-color: #AAAAAA;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+}
+ul, ol, li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+main {
+  width: 100%;
+  margin-top: 150px;
+}
+text {
+  font-size: 12px;
+  user-select: none;
+  pointer-events: none;
+}
 
+/*body,html{font-family:"Roboto",bold;font-size:30px;line-height:40px}*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;   /*убирает горизонтальный дефолтный скрол на сайте */
+}
 body {
   width: 100%;
   /*min-height: 100vh;*/
@@ -25,13 +73,66 @@ main {
     "B B B B B B";
 }
 
-/*header {
-	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-}*/
+header {
+  background-color: #2D2E2C;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+._container {
+  width: 980px;
+  margin: 0px auto;
+}
+.header__conteiner {
+  left: 0;
+  display: flex;
+  min-height: 90px;
+  align-items: center;   /* выравнивает элементы по центру по высоте */
+}
+.logo_1733 {
+  margin-top: 25px;
+  font-size: 24px;
+  color: white;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.logo_map {
+  margin-top: 2px;
+  margin-left: -5px;
+  color: #9EBB84;
+  font-size: 31px;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+#pipka {
+  margin-top: 15px;
+}
+
+._logo {
+  display: inline-block;
+  align-items: center;
+}
+.header__doplogo {
+  align-items: center;
+}
+
+img {
+  margin: 14px;
+}
+img {
+  vertical-align: top;
+}
 
 footer {
 	position: absolute;
