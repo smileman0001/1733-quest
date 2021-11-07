@@ -77,9 +77,13 @@ main {
     right: 0;
     height: 50px;
 }*/
+._container {
+  width: 993px;
+  margin: 0px auto;
+}
 header {
   background-color: #2D2E2C;
-  height: 90px;
+  height: 63px;
   position: absolute;
   top: 0;
   left: 0;
@@ -93,30 +97,27 @@ header {
   top: 0;
   z-index: 50;
 }
-._container {
-  width: 980px;
-  margin: 0px auto;
-}
 .header__conteiner {
   left: 0;
   display: flex;
-  min-height: 90px;
+  min-height: 63px;
   align-items: center;   /* выравнивает элементы по центру по высоте */
+  justify-content: center;
 }
+
+.header__logo {
+  align-items: center;
+}
+
 .logo_1733 {
-  margin-top: 25px;
-  font-size: 24px;
-  color: white;
+  margin-right: 25px;
+  font-size: 18px;
+  color: #F0F0F0;
   font-family: "Roboto";
-  font-weight: bold;
+  font-weight: normal;
 }
 .logo_quest {
-  margin-top: 2px;
-  margin-left: -5px;
   color: #95CCDD;
-  font-size: 31px;
-  font-family: "Roboto";
-  font-weight: 500;
 }
 
 #pipka {
