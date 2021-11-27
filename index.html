@@ -15,7 +15,6 @@
     <header class = "header">
         <div class="header__conteiner _container">
           <a href="" class="header__logo">
-            <!-- <img class = "_logo" src="карта/logo1.png"> -->
             <h1 class="logo_1733 _logo">
               Проект
             </h1>
@@ -25,11 +24,14 @@
               Карта
             </h1>
           </a>
-          <a href="" class="header__logo">
-            <h1 class="logo_1733 _logo logo_quest">
-              Квест
+          <a href="">
+            <h1 class="logo_1733 _logo">
+              Караван
             </h1>
           </a>
+          <h1 class="logo_1733 _logo logo_quest">
+            Квест
+          </h1>
           <a href="" class="header__logo">
             <h1 class="logo_1733 _logo">
               Этапы работы
@@ -45,22 +47,55 @@
               Авторы
             </h1>
           </a>
-          <!-- <div class="header__doplogo">
-            <img id="pipka" class = "_logo" src="карта/pipka.png">
-            <h1 class="logo_map _logo">
-              карта
-            </h1>
-          </div> -->
         </div>
       </header>
     <main>
       <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
       <script type="text/javascript">
+        let info = ""
+        let map = new Map()
+        map.set("Иностранец", ["Попал в плен", "Заключил контракт"])
+        map.set("Заключил контракт", ["Медик", "Горный специалист"])
+        map.set("Чиновник Тобольской канцелярии", ["Работа в горном начальстве", "Отправиться делопроизводителем в Кер... экспедицию"])
+        map.set("Дворянин", ["Выпускник военно-артиллерийской школы", "Прибыли в команде В.И. Ген..."])
+        map.set("Выпускник военно-артиллерийской школы", ["Учиться горному делу (Штифт)", "..."])
+        map.set("Прибыли в команде В.И. Ген...", ["Остаться адьютантом Ген...", "Отправиться к земским делам (Управлять дистриктом)"])
         function toggleText(btn) {
-          let arr = new Map();
-          arr.set(" Ответ 1 ", "Вариант 1").set(" Ответ 2 ", "Вариант 2");
           let str = btn.innerHTML;
-          document.getElementById('history').textContent = arr.get(str);
+          console.log(str);
+          document.getElementById('history').textContent = str;
+          if(map.has(str))
+          {
+            let obj = map.get(str);
+            console.log(obj);
+            if (obj.count > 2)
+            {
+              document.getElementById('button1').textContent = obj[0];
+              document.getElementById('button2').textContent = obj[1];
+              document.getElementById('button3').textContent = obj[2];
+              document.getElementById('button4').textContent = obj[3];
+            }
+            else
+            {
+              document.getElementById('button1').textContent = obj[0];
+              document.getElementById('button2').textContent = obj[1];
+              off_butt("button3");
+              off_butt("button4");
+            }
+          }
+          else
+          {
+            document.getElementById('history').style.height = "500px";
+            document.getElementById('history').textContent = "Конец";
+            off_butt("button1");
+            off_butt("button2");
+            off_butt("button3");
+            off_butt("button4");
+          }
+        }
+        function off_butt (elem) {
+          document.getElementById(elem).style.opacity = 0;
+          document.getElementById(elem).disabled = true;
         }
         //document.getElementById('button1').addEventListener('click', toggleText);
       </script>
@@ -68,14 +103,20 @@
         1 / 3
       </div> -->
       <div class="history" id = "history">
-        Текст истории
+        Начало карьеры
       </div>
       <section class="answers">
         <div class = "button1">
-          <button id = "button1"  class="button" onclick="toggleText(this)"> Ответ 1 </button>
+          <button id = "button1"  class="button" onclick="toggleText(this)">Иностранец</button>
         </div>
         <div class = "button2">
-          <button id = "button2"  class="button" onclick="toggleText(this)"> Ответ 2 </button>
+          <button id = "button2"  class="button" onclick="toggleText(this)">Отставной офицер Семеновского или Преображенского полка</button>
+        </div>
+        <div class = "button3">
+          <button id = "button3"  class="button" onclick="toggleText(this)">Дворянин</button>
+        </div>
+        <div class = "button4">
+          <button id = "button4"  class="button" onclick="toggleText(this)">Чиновник Тобольской канцелярии</button>
         </div>
       </section>
     </main>

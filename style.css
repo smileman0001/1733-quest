@@ -128,7 +128,8 @@ header {
 }
 
 .logo_quest:hover {
-  color: #F0F0F0;
+  border: 1px solid #2D2E2C;
+  background-color: #2D2E2C;
 }
 
 .logo_quest {
@@ -181,7 +182,7 @@ footer {
     gap: 0px 80px;
     grid-template-areas:
       "O O O O O O    C C C C C C"
-      "O O O O O O    C C C C C C";
+      "D D D D D D    V V V V V V";
 }
 .button1 {
   grid-area: O;
@@ -190,6 +191,16 @@ footer {
 }
 .button2 {
   grid-area: C;
+  justify-self : center;
+  align-self : center;
+}
+.button3 {
+  grid-area: D;
+  justify-self : center;
+  align-self : center;
+}
+.button4 {
+  grid-area: V;
   justify-self : center;
   align-self : center;
 }
